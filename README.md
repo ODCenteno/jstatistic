@@ -1,4 +1,4 @@
-# MAth, Statistics, Etc.
+# Math, Statistics, Etc.
 
 This project brings together various everyday mathematical formulas including those related to geometric figures. In addition, it integrates formulas to calculate percentages and discounts.
 

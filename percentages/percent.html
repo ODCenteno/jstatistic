@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../style/main.css">
+
+  <title>jstatistic</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar-container"></nav>
+  </header>
+  <main class="math-main__container">
+    <h1>Calculando porcentajes de descuento</h1>
+    <p>
+      Abre la consola del inspector para realizar las operaciones. <br><br>
+      ¿Estas comprando y quieres saber cuánto ahorrarás? ¡Ha llegado tu salvación!
+    </p>
+    <section class="cards__container">
+      <div class="card">
+        <h3 class="card__title">Porcentaje de descuento</h3>
+        <p>Para calcular el precio final con el descuento, ingresa el precio del producto y el porcentaje de descuento a aplicar.</p>
+        <form class="form" action="">
+          <div class="input-control">
+            <label for="price">Precio:</label><br>
+            <input type="number" id="price" name="price">
+            <div class="error-input"></div>
+          </div>
+          <div>
+            <label for="discount">Descuento:</label><br>
+            <input type="number" id="discount" name="discount">
+          </div>
+          <button id="btn-submit" type="submit">Calcular</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <script src="./src/percentages.js"></script>
+</body>
+</html>

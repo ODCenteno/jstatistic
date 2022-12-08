@@ -32,10 +32,14 @@ html {
   scroll-behavior: smooth;
   color: var(--primary-text);
 }
-
+h3 {
+  font-size: var(--subtitle);
+  line-height: 1.6;
+}
 p {
   font-size: var(--p);
   line-height: 1.6;
+  text-align: justify;
 }
 
 /* BEM */
@@ -77,6 +81,11 @@ p {
   padding: 12px 16px;
   background-color: var(--divider-grey);
   border-radius: var(--size-radius);
+}
+.input-control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 input[type=number] {
   background-color: var(--secondary-text-grey);
