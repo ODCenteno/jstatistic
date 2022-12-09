@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://kit.fontawesome.com/094db4ff8b.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="../style/main.css">
 
   <title>jstatistic</title>
@@ -15,29 +16,52 @@
   <main class="math-main__container">
     <h1>Calculando porcentajes de descuento</h1>
     <p>
-      Abre la consola del inspector para realizar las operaciones. <br><br>
       ¿Estas comprando y quieres saber cuánto ahorrarás? ¡Ha llegado tu salvación!
     </p>
     <section class="cards__container">
       <div class="card">
         <h3 class="card__title">Porcentaje de descuento</h3>
         <p>Para calcular el precio final con el descuento, ingresa el precio del producto y el porcentaje de descuento a aplicar.</p>
-        <form class="form" action="">
-          <div class="input-control">
-            <label for="price">Precio:</label><br>
-            <input type="number" id="price" name="price">
-            <div class="error-input"></div>
+        <form class="form__main" action="submit" id="form">
+          <!-- Input Group for price -->
+          <div class="form__group" id="group__price">
+            <label for="price" class="form__label">Precio:</label>
+            <div class="form__group-input">
+              <input type="number" class="form__input" id="price" name="price">
+              <i class="form__validation-state fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="form__error-input">Solo puedes introducir números positivos</p>
           </div>
-          <div>
-            <label for="discount">Descuento:</label><br>
-            <input type="number" id="discount" name="discount">
+
+          <!-- Input Group for discount -->
+          <div class="form__group" id="group__discount">
+            <label for="discount" class="form__label">Descuento:</label>
+            <div class="form__group-input">
+              <input type="number" class="form__input" id="discount" name="discount">
+              <i class="form__validation-state fa-solid fa-circle-xmark"></i>
+            </div>
+            <p class="form__error-input">Solo puedes introducir números positivos</p>
           </div>
-          <button id="btn-submit" type="submit">Calcular</button>
+
+          <!-- Warning message -->
+          <div class="form__warning-message">
+            <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor llena los campos correctamente</p>
+          </div>
+
+          <!-- submit button -->
+          <div class="form__group-btn-submit" id="form__group-btn-submit">
+            <button id="btn-submit" class="form__btn" type="submit">Calcular</button>
+            <p class="form__success-msg" id="form__success-msg">¡Formulario enviado correctamente!</p>
+          </div>
         </form>
+        <div id="discounted-price">
+          
+        </div>
       </div>
     </section>
   </main>
 
   <script src="./src/percentages.js"></script>
+  <script src=""></script>
 </body>
 </html>
