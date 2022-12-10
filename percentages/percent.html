@@ -23,14 +23,23 @@
         <h3 class="card__title">Porcentaje de descuento</h3>
         <p>Para calcular el precio final con el descuento, ingresa el precio del producto y el porcentaje de descuento a aplicar.</p>
         <form class="form__main" action="submit" id="form">
+          <!-- Input Group for article -->
+          <div class="form__group" id="group__article">
+            <label for="article" class="form__label">Artículo:</label>
+            <div class="form__group-input">
+              <input type="text" class="form__input" id="article" name="article">
+              <i class="form__validation-state fa-solid fa-circle-xmark" id="item_article"></i>
+            </div>
+            <p class="form__error-input--article">Ingresa el nombre del artículo sin caracteres especiales</p>
+          </div>
           <!-- Input Group for price -->
           <div class="form__group" id="group__price">
             <label for="price" class="form__label">Precio:</label>
             <div class="form__group-input">
               <input type="number" class="form__input" id="price" name="price">
-              <i class="form__validation-state fa-solid fa-circle-xmark"></i>
+              <i class="form__validation-state fa-solid fa-circle-xmark" id="item_price"></i>
             </div>
-            <p class="form__error-input">Solo puedes introducir números positivos</p>
+            <p class="form__error-input--price">El precio debe ser mayor a cero.</p>
           </div>
 
           <!-- Input Group for discount -->
@@ -38,9 +47,9 @@
             <label for="discount" class="form__label">Descuento:</label>
             <div class="form__group-input">
               <input type="number" class="form__input" id="discount" name="discount">
-              <i class="form__validation-state fa-solid fa-circle-xmark"></i>
+              <i class="form__validation-state fa-solid fa-circle-xmark" id="item_discount"></i>
             </div>
-            <p class="form__error-input">Solo puedes introducir números positivos</p>
+            <p class="form__error-input--discount">El descuento debe ser mayor a cero.</p>
           </div>
 
           <!-- Warning message -->
@@ -51,10 +60,10 @@
           <!-- submit button -->
           <div class="form__group-btn-submit" id="form__group-btn-submit">
             <button id="btn-submit" class="form__btn" type="submit">Calcular</button>
+            <div id="discounted-price">
             <p class="form__success-msg" id="form__success-msg">¡Formulario enviado correctamente!</p>
           </div>
         </form>
-        <div id="discounted-price">
           
         </div>
       </div>

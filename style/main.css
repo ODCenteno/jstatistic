@@ -28,12 +28,16 @@
   margin: 0;
   padding: 0;
 }
-
 html {
   font-size: 62.5%;
   font-family: 'DM Sans', sans-serif;
   scroll-behavior: smooth;
   color: var(--primary-text);
+}
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }
 h3 {
   font-size: var(--subtitle);
@@ -117,13 +121,14 @@ p {
   outline: none;
   box-shadow: 0px 3px 1px var(--dark-primary);
 }
-.form__error-input {
+.form__error-input--article, .form__error-input--price, .form__error-input--discount {
   font-size: var(--xs);
   margin-bottom: 0;
   display: none;
 }
 .form__error-input-active {
   display: block;
+  color: var(--error);
 }
 
 .input-control {
@@ -134,7 +139,7 @@ p {
 .form__validation-state {
   position: absolute;
   right: 10px;
-  bottom: 15px;
+  bottom: 24px;
   z-index: 100;
   font-size: var(--small);
   opacity: 0;
@@ -185,6 +190,22 @@ button:hover {
 }
 
 /* Validation Styles */
-
-
+.form__group-success .form__validation-state {
+  color: var(--green-success);
+  opacity: 1;
+}
+.form__group-error .form__validation-state {
+  color: var(--error);
+}
+.form__group-error .form__label {
+  color: var(--error);
+  opacity: 1;
+}
+.form__group-error .form__input, .form__group-error .form__validation-state {
+  border-color: var(--error);
+  opacity: 1;
+}
 /* Mediaqueries */
+@media screen and (max-width: 700px) {
+  
+}
