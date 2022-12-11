@@ -16,8 +16,8 @@
   --ltitle: 3.2rem;
   --title: 2.4rem;
   --subtitle: 1.8rem;
-  --p:1.6rem;
-  --small:1.4rem;
+  --p:1.4rem;
+  --small:1.3rem;
   --xs: 1.2rem;
   --size-bezel: 8px;
   --size-radius: 12px;
@@ -33,6 +33,10 @@ html {
   font-family: 'DM Sans', sans-serif;
   scroll-behavior: smooth;
   color: var(--primary-text);
+}
+body {
+  display: grid;
+  grid-template-rows: 50px 100vh;
 }
 input[type=number]::-webkit-inner-spin-button, 
 input[type=number]::-webkit-outer-spin-button { 
@@ -53,23 +57,62 @@ p {
 /* one-block__one-element_modifier  */
 /* optional-block__element--modifier-style */
 
-.navbar-container {
+/* Base styles (index) */
+.top-navbar-container {
   width: 100%;
-  height: 50px;
+  height: 100%;
   background-color: var(--dark-primary);
+  grid-row: 1 / 2;
+}
+.math-main__container {
+  height: 100vh;
+  grid-row: 2 / 3;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  grid-template-rows: 1fr;
+  place-content: center;
 }
 
-.math-main__container {
-  display: grid;
-  place-content: center;
-  padding: 24px;
-  margin: auto;
-  max-width: 800px;
+/* Side Bar Menu */
+.side-navbar__container {
+  /* grid-row: 1 / 3;
+  grid-column: 1 / 2; */
+  background-color: var(--dark-primary);
+  padding: var(--size-bezel);
 }
-.math-main__container h1 {
+.side-navbar__menu ul {
+  list-style: none;
+}
+.side-menu_item {
+  margin: var(--size-bezel) 0;
+  font-size: var(--small);
+  font-weight: 500;
+  line-height: 1.3;
+}
+.side-menu_item a {
+  text-decoration: none;
+  color: var(--primary-text);
+}
+.side-menu_item a:active {
+  color: var(--accent-purple);
+}
+
+
+/* Main Content Section */
+.main-content__section {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  place-content: center;
+  text-align: center;
+  padding: 24px;
+}
+.main-content__section h1 {
   font-size: var(--title);
   margin: 16px auto 24px;
 }
+
+
+/* APP Styles */
 .cards__container {
   display: grid;
   grid-template-columns: repeat(autofit, minmax(50px,1fr));
@@ -180,6 +223,9 @@ button:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
+.discounted-price {
+  display: none;
+}
 .form__success-msg {
   color: var(--green-success);
   font-weight: bold;
@@ -205,6 +251,10 @@ button:hover {
   border-color: var(--error);
   opacity: 1;
 }
+.discounted-price-active {
+  display: block;
+}
+
 /* Mediaqueries */
 @media screen and (max-width: 700px) {
   

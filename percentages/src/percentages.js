@@ -3,8 +3,9 @@
 const articleRegEx = /^[a-zA-Z0-9]/;
 const form = document.querySelector('.form__main');
 const inputs = document.querySelectorAll('#form input');
-const successMsg = document.querySelectorAll('.form__success-msg');
+const successMsg = document.querySelector('.form__success-msg');
 const errorMsg = document.querySelector('.form__warning-message');
+const resultMsg = document.querySelector('.discounted-price');
 
 const fieldsValidated = {
   articleIsValid: false,
@@ -29,7 +30,7 @@ function inputValidation(regex, input, field) {
     document.getElementById(`item_${field}`).classList.add('fa-circle-xmark');
     document.getElementById(`item_${field}`).classList.remove('fa-circle-check');
     document.querySelector(`.form__error-input--${field}`).classList.add('form__error-input-active');
-    fieldsValidated.articleIsValid = true;
+    fieldsValidated.articleIsValid = false;
   }
 }
 
@@ -46,11 +47,12 @@ function numberFieldValidation(input, field) {
     document.getElementById(`item_${field}`).classList.add('fa-circle-xmark');
     document.getElementById(`item_${field}`).classList.remove('fa-circle-check');
     document.querySelector(`.form__error-input--${field}`).classList.add('form__error-input-active');
-    fieldsValidated[`${field}IsValid`] = true;
+    fieldsValidated[`${field}IsValid`] = false;
   }
 }
 
 const validateFormControl = (e) => {
+  console.log(e.target.value);
   switch (e.target.name) {
     case 'article':
       inputValidation(articleRegEx, e.target, e.target.name);
@@ -59,11 +61,15 @@ const validateFormControl = (e) => {
       numberFieldValidation(e.target, e.target.name);
       break;
     case 'discount':
-      if (e.targe.value > 0 && e.target.value < 100) {
+      if (e.target.value > 0 && e.target.value < 100) {
         document.querySelector(`.form__error-input--${e.target.name}`).classList.remove('form__error-input-active');
         numberFieldValidation(e.target, e.target.name);
       } else {
+        document.getElementById(`group__${e.target.name}`).classList.add('form__group-error');
+        document.getElementById(`item_${e.target.name}`).classList.add('fa-circle-xmark');
+        document.getElementById(`item_${e.target.name}`).classList.remove('fa-circle-check');
         document.querySelector(`.form__error-input--${e.target.name}`).classList.add('form__error-input-active');
+        fieldsValidated[`${e.target.name}IsValid`] = false;
       }
       break;
     default:
@@ -91,10 +97,11 @@ form.addEventListener('submit', (e) => {
     // discountedPriceResult = ``;
 
     const discountedPriceResult = document.getElementById('discounted-price');
-    discountedPriceResult.innerHTML = '<p></p>';
+    discountedPriceResult.innerHTML = '';
     const priceAfterDiscount = calcReducedPrice(submitedData.price, submitedData.discount);
 
     discountedPriceResult.innerHTML += `<p>El precio final a pagar es: ${priceAfterDiscount}</p>`;
+    resultMsg.classList.add('discounted-price-active');
 
     errorMsg.classList.remove('form__warning-message-active');
 
