@@ -13,6 +13,7 @@
   --green-success: #08A65E;
 
   /* Font Sizes */
+  --primary-font: 'Nunito', sans-serif;
   --ltitle: 3.2rem;
   --title: 2.4rem;
   --subtitle: 1.8rem;
@@ -74,6 +75,14 @@ header {
   height: 100%;
   background-color: var(--primary-blue);
 }
+
+.home__button a {
+  font-family: var(--primary-font);
+  font-size: var(--ltitle);
+  text-decoration: none;
+  font-weight: bold;
+  margin-left: 20px;
+}
 /* .math-main__container {
   display: grid;
   grid-template-columns: 200px 1fr;
@@ -86,6 +95,7 @@ header {
   grid-area: sidebar;
   background-color: var(--primary-blue);
   padding: var(--size-bezel);
+  opacity: 95%;
 }
 .side-navbar__menu ul {
   list-style: none;
@@ -296,6 +306,7 @@ button:hover {
   cursor: pointer;
   transform: scale(1.05);
 }
+
 /* Mediaqueries */
 @media screen and (max-width: 700px) {
   
