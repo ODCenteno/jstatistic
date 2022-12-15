@@ -4,6 +4,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/claymorphism-css/dist/clay.css"
+  />
   <link rel="stylesheet" href="./style/main.css">
 
   <title>jstatistic</title>
@@ -12,21 +17,36 @@
   <header>
     <nav class="top-navbar-container"></nav>
   </header>
-  <div class="math-main__container">
-    <div class="side-navbar__container">
-      <nav class="side-navbar__menu">
-        <ul>
-          <li class="side-menu_item"><a href="/">Fórmulas matemáticas</a></li>
-          <li class="side-menu_item"><a href="/">Porcentajes</a></li>
-          <li class="side-menu_item"><a href="/">Estadística básica</a></li>
-          <li class="side-menu_item"><a href="/">Anáilisis de salarios</a></li>
-        </ul>
-      </nav>
-    </div>
-    <main class="main-content__section">
-      <h1>Taller Práctico de JavaScript: Matemáticas y Estadística Básica</h1>
-    </main>
+  <div class="side-navbar__container">
+    <nav class="side-navbar__menu">
+      <ul>
+        <li class="side-menu_item"><a href="/">Fórmulas matemáticas</a></li>
+        <li class="side-menu_item"><a href="/">Porcentajes</a></li>
+        <li class="side-menu_item"><a href="/">Estadística básica</a></li>
+        <li class="side-menu_item"><a href="/">Anáilisis de salarios</a></li>
+      </ul>
+    </nav>
   </div>
+  <main class="main-content__section">
+    <h1>Taller Práctico de JavaScript: Matemáticas y Estadística Básica</h1>
+  </main>
+  <section class="calculator__block">
+    <div class="calculator__buttons-block">
+      <button id="number1" class="clay calc__button">1</button>
+      <button id="number2" class="clay calc__button">2</button>
+      <button id="number3" class="clay calc__button">3</button>
+      <button id="number4" class="clay calc__button">4</button>
+      <button id="number5" class="clay calc__button">5</button>
+      <button id="number6" class="clay calc__button">6</button>
+      <button id="number7" class="clay calc__button">7</button>
+      <button id="number8" class="clay calc__button">8</button>
+      <button id="number9" class="clay calc__button">9</button>
+      <button id="number0" class="clay calc__button">0</button>
+      <button id="dot-symbol" class="clay calc__button">.</button>
+      <button id="erase-btn" class="clay calc__button"><</button>
+      <button class="clay enter__button" id="enter-btn">Enter</button>
+    </div>
+  </section>
 
   <script src="./index.js"></script>
 </body>
