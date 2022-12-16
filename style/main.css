@@ -83,12 +83,6 @@ header {
   font-weight: bold;
   margin-left: 20px;
 }
-/* .math-main__container {
-  display: grid;
-  grid-template-columns: 200px 1fr;
-  grid-template-rows: 1fr;
-  place-content: center;
-} */
 
 /* Side Bar Menu */
 .side-navbar__container {
@@ -117,36 +111,56 @@ header {
 
 /* Main Content Section */
 .main-content__section {
+  width: 100%;
   grid-area: main;
   place-content: center;
   text-align: center;
   padding: 24px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 64px 64px 1fr 1fr;
+  grid-template-areas: 
+  "title title title title"
+  "subt subt subt subt"
+  ". cirle circle ."
+  "infop porciento porciento porciento";
+  gap: 12px;
 }
-.main-content__section h1 {
-  font-size: var(--title);
+.main-content__title {
+  font-size: var(--subtitle);
   font-family: 'Nunito', sans-serif;
-  margin: 16px auto 24px;
+  align-self: center;
+  grid-area: title;
 }
-
-
-/* APP Styles */
+.main__description {
+  grid-area: subt;
+  text-align: center;
+}
+.graphic-result__container {
+  grid-area: cirle;
+}
+.info-percent__container {
+  grid-area: infop;
+}
+/* CARDS Styles */
 .cards__container {
+  grid-area: porciento;
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(autofit, minmax(50px,1fr));
-  grid-auto-flow: row;
+  grid-template-rows: 1fr;
   gap: 12px;
   justify-items: center;
 }
 .card {
-  min-width: 200px;
-  max-width: 60%;
+  width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   padding: 12px 16px;
-  background-color: var(--divider-grey);
+  background-color: var(--primary-blue);
   border-radius: var(--size-radius);
 }
 
@@ -156,7 +170,6 @@ header {
   flex-direction: column;
 }
 .form__label {
-  display: block;
   font-weight: 700;
   font-size: var(--small);
   padding: 10px;
@@ -278,6 +291,10 @@ button:hover {
   padding: 40px;
   grid-area: calculator;
   background-color: var(--warning);
+  border-radius: 12px;
+  padding: var(--size-bezel);
+  margin: 8px;
+  box-shadow: -1px 0 40px var(--light-primary);
 }
 .calculator__buttons-block {
   display: grid;
@@ -293,11 +310,13 @@ button:hover {
   height: 100%;
   --clay-background: var(--accent-purple);
   --clay-border-radius: 12px;
+  --clay-font-family: var(--primary-font);
 }
 .calc__button, .enter__button {
   color: var(--light-primary);
   font-size: var(--title);
   font-weight: bold;
+  opacity: 0.9;
 }
 .enter__button {
   grid-area: enter;
@@ -305,6 +324,7 @@ button:hover {
 .calc__button:hover, .enter__button:hover {
   cursor: pointer;
   transform: scale(1.05);
+  opacity: 1;
 }
 
 /* Mediaqueries */
