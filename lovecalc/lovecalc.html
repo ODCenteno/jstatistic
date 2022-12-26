@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+  <link
+  rel="stylesheet"
+  href="https://unpkg.com/claymorphism-css/dist/clay.css"
+  />
+  <link rel="stylesheet" href="../style/main.css">
+
+  <title>jstatistic</title>
+</head>
+<body>
+  <header>
+    <nav class="top-navbar-container">
+      <div class="home__button">
+        <a href="http://127.0.0.1:5500/index.html"> HOME</a>
+      </div>
+    </nav>
+  </header>
+  <div class="side-navbar__container">
+    <nav class="side-navbar__menu">
+      <ul>
+        <li class="side-menu_item"><a href="http://127.0.0.1:5500/math-js/math.html">Fórmulas matemáticas</a></li>
+        <li class="side-menu_item"><a href="http://127.0.0.1:5500/randomness/random.html">Números aleatorios</a></li>
+        <li class="side-menu_item"><a href="http://127.0.0.1:5500/percentages/percent.html">Porcentajes</a></li>
+        <li class="side-menu_item"><a href="/">Estadística básica</a></li>
+        <li class="side-menu_item"><a href="/">Análisis de salarios</a></li>
+        <li class="side-menu_item"><a href="/">Calculadora del amor</a></li>
+      </ul>
+    </nav>
+  </div>
+  <main class="main-content__section math-main__container">
+    <h1 class="main-content__title">Calculadora del amor</h1>
+    <p class="main-content__description">
+      Conoce la compatibilidad que tienen dos personas a partir del análisis de sus nombres. Para iniciar, ingresa el nombre de las personas y da clic en el botón de emparejar.
+    </p>
+    <section class="cards__container">
+      <div class="card">
+        <h3 class="card__title">Emparejamiento</h3>
+        <form class="form__main" action="submit" id="form">
+          <!-- Person 1 name -->
+          <div class="form__group" id="group__person1">
+            <label for="person1" class="form__label">Nombre de la persona 1:</label>
+            <div class="form__group-input">
+              <input type="text" class="form__input" id="person1" name="person1">
+              <i class="form__validation-state fa-solid fa-circle-xmark" id="item_person1"></i>
+            </div>
+            <p class="form__error-input--person1">Ingresa el nombre de la primera persona</p>
+          </div>
+          <!-- Person 2 name -->
+          <div class="form__group" id="group__person2">
+            <label for="person2" class="form__label">Nombre de la persona 2:</label>
+            <div class="form__group-input">
+              <input type="text" class="form__input" id="person2" name="person2">
+              <i class="form__validation-state fa-solid fa-circle-xmark" id="item_person2"></i>
+            </div>
+            <p class="form__error-input--person2">Ingresa el nombre de la segunda persona</p>
+          </div>
+
+          <!-- Warning message -->
+          <div class="form__warning-message">
+            <p><i class="fa-solid fa-triangle-exclamation"></i> <b>Error:</b> Por favor llena los campos correctamente</p>
+          </div>
+
+          <!-- submit button -->
+          <div class="form__group-btn-submit" id="form__group-btn-submit">
+            <button id="btn-submit" class="form__btn" type="submit">Calcular</button>
+            <div class="compatibility-result" id="compatibility-result">
+            </div>
+            <p class="form__success-msg" id="form__success-msg">¡Formulario enviado correctamente!</p>
+      </div>
+    </section>
+  </main>
+  <script src="./src/lovecalc.js"></script>
+</body>
+</html>

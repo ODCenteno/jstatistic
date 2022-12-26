@@ -1,10 +1,17 @@
-# Math, Statistics, Etc.
+# JStatistics
 
-This project brings together various everyday mathematical formulas including those related to geometric figures. In addition, it integrates formulas to calculate percentages and discounts.
+This project brings together various everyday mathematical formulas. I started with some simple geometric figures calculations, and now you cand find more tools.
 
-In a second section there are different basic statistical formulas.
+Here is a list of the tools this site brings to you:
+* Basic math formulas
+* Random numbers generator
+* Percentage calculator
+* Basic statistics
+* Salary analysis
+* Love calculator
+* Body Mass Index Calculator
 
-Finally, you will be able to carry out a salary analysis applying what has been seen previously.
+I build this project to practice my skills with HTML, CSS and JavaScript, taking the ideas from different tutorials and courses I followed.
 
 ## Tools and tecnologies used
 
