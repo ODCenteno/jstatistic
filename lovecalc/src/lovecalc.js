@@ -46,9 +46,11 @@ const validateFormControl = (e) => {
   switch (e.target.name) {
     case 'person1':
       inputValidation(nameRegEx, e.target, e.target.name);
+      errorMsg.classList.remove('form__warning-message-active');
       break;
     case 'person2':
       inputValidation(nameRegEx, e.target, e.target.name);
+      errorMsg.classList.remove('form__warning-message-active');
       break;
     default:
       console.log(`Intenta de nuevo con un nombre adecuado para: ${e.target.name}.`);

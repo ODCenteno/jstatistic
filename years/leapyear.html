@@ -11,7 +11,7 @@
   />
   <link rel="stylesheet" href="../style/main.css">
 
-  <title>jstatistic</title>
+  <title> Leap Year | JStatistic</title>
 </head>
 <body>
   <header>
@@ -29,36 +29,28 @@
         <li class="side-menu_item"><a href="http://127.0.0.1:5500/percentages/percent.html">Porcentajes</a></li>
         <li class="side-menu_item"><a href="/">Estadística básica</a></li>
         <li class="side-menu_item"><a href="/">Análisis de salarios</a></li>
-        <li class="side-menu_item"><a href="http://127.0.0.1:5500/lovecalc/lovecalc.html">Calculadora del amor</a></li><li class="side-menu_item"><a href="http://127.0.0.1:5500/years/leapyear.html">¿Es año bisiesto?</a></li>
+        <li class="side-menu_item"><a href="http://127.0.0.1:5500/lovecalc/lovecalc.html">Calculadora del amor</a></li>
+        <li class="side-menu_item"><a href="http://127.0.0.1:5500/years/leapyear.html">¿Es año bisiesto?</a></li>
       </ul>
     </nav>
   </div>
   <main class="main-content__section math-main__container">
-    <h1 class="main-content__title">Calculadora del amor</h1>
+    <h1 class="main-content__title">Conoce qué año es bisiesto</h1>
     <p class="main-content__description">
-      Conoce la compatibilidad que tienen dos personas a partir del análisis de sus nombres. Para iniciar, ingresa el nombre de las personas y da clic en el botón de emparejar.
+      El año bisiesto tiene 366 días, uno más de lo normal. La palabra se deriva del latín "bis sextus dies ante calendas martii" ("repetido el sexto día antes del primer día del mes de marzo").
     </p>
     <section class="cards__container">
       <div class="card">
-        <h3 class="card__title">Emparejamiento</h3>
+        <h3 class="card__title">Calculadora de año bisiesto</h3>
         <form class="form__main" action="submit" id="form">
           <!-- Person 1 name -->
-          <div class="form__group" id="group__person1">
-            <label for="person1" class="form__label">Nombre de la persona 1:</label>
+          <div class="form__group" id="group__bisiesto">
+            <label for="bisiesto" class="form__label">Ingresa el año</label>
             <div class="form__group-input">
-              <input type="text" class="form__input" id="person1" name="person1">
-              <i class="form__validation-state fa-solid fa-circle-xmark" id="item_person1"></i>
+              <input type="number" class="form__input" id="bisiesto" name="bisiesto" placeholder="2000">
+              <i class="form__validation-state fa-solid fa-circle-xmark" id="item_bisiesto"></i>
             </div>
-            <p class="form__error-input--person1">Ingresa un nombre válido</p>
-          </div>
-          <!-- Person 2 name -->
-          <div class="form__group" id="group__person2">
-            <label for="person2" class="form__label">Nombre de la persona 2:</label>
-            <div class="form__group-input">
-              <input type="text" class="form__input" id="person2" name="person2">
-              <i class="form__validation-state fa-solid fa-circle-xmark" id="item_person2"></i>
-            </div>
-            <p class="form__error-input--person2">Ingresa un nombre válido</p>
+            <p class="form__error-input--bisiesto">Ingresa un año válido</p>
           </div>
 
           <!-- Warning message -->
@@ -75,6 +67,6 @@
       </div>
     </section>
   </main>
-  <script src="./src/lovecalc.js"></script>
+  <script src="./src/leapyear.js"></script>
 </body>
 </html>
