@@ -15,7 +15,8 @@ const resultMsg = document.querySelector('.compatibility-result');
 const nameRegEx = /^[a-zA-Z]/;
 
 const fieldsValidated = {
-  nameIsValid: false,
+  name1IsValid: false,
+  name2IsValid: false,
 };
 
 function getRandomPercentage() {
@@ -55,7 +56,7 @@ const validateFormControl = (e) => {
 };
 
 inputs.forEach((input) => {
-  input.addEventListener('keyUp', validateFormControl);
+  input.addEventListener('keyup', validateFormControl);
   input.addEventListener('blur', validateFormControl);
 });
 

@@ -78,7 +78,7 @@ const validateFormControl = (e) => {
 };
 
 inputs.forEach((input) => {
-  input.addEventListener('keyUp', validateFormControl);
+  input.addEventListener('keyup', validateFormControl);
   input.addEventListener('blur', validateFormControl);
 });
 
