@@ -141,7 +141,7 @@ header {
   align-self: center;
   grid-area: title;
 }
-.main__description, .main-content__description {
+.main__description, .main-content__description, .main-content__section p {
   grid-area: subt;
   text-align: center;
 }
@@ -265,7 +265,7 @@ header {
   background-color: var(--secondary-goldenrod);
   color: var(--white-main-text);
   padding: var(--size-bezel) calc(var(--size-bezel) * 2);
-  margin-bottom: 12px;
+  margin: 12px 0;
   border: none;
   border-radius: var(--size-radius);
   font-weight: 900;

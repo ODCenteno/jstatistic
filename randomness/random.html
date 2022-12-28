@@ -29,27 +29,25 @@
         <li class="side-menu_item"><a href="http://127.0.0.1:5500/percentages/percent.html">Porcentajes</a></li>
         <li class="side-menu_item"><a href="/">Estadística básica</a></li>
         <li class="side-menu_item"><a href="/">Análisis de salarios</a></li>
-        <li class="side-menu_item"><a href="/">Calculadora del amor</a></li>
+        <li class="side-menu_item"><a href="http://127.0.0.1:5500/lovecalc/lovecalc.html">Calculadora del amor</a></li>
+        <li class="side-menu_item"><a href="http://127.0.0.1:5500/years/leapyear.html">¿Es año bisiesto?</a></li>
       </ul>
     </nav>
   </div>
   <main class="main-content__section math-main__container">
-    <h1>Generador de números aleatorios</h1>
+    <h1 class="main-content__title">Generador de números aleatorios</h1>
     <p>
+      Elige entre un número aleatorio en un rango específico o utilizar un simulador de dados.
     </p>
     <section class="cards__container">
       <div class="card">
-        <h3 class="card__title">Cuadrado</h3>
+        <h3 class="card__title">dados</h3>
         <figure class="image__container">
-          <img class="img_geometric" src="https://www.hackmath.net/img/55/square_diagonal_2.jpg" alt="dibujo de un cuadrado con letras indicando sus lados y vértices">
-          <figcaption></figcaption>
+          <img class="img_dice" id="image_dice1" src="./images/dice6.png" alt="dibujo de un cuadrado con letras indicando sus lados y vértices" alt="un dado mostrando un número">
+          <figcaption>Dado 1</figcaption>
         </figure>
-        <p>Para calcular el perímetro y área de un cuadrado ingresa la longitud de uno de sus lados en metros.</p>
-        <p>
-          <label></label><br>
-          <input type="number" name="square_lenght">
-        </p>
-        <button class="clay">Calcular</button>
+        <p>Utiliza este dado digital para tus juegos favoritos</p>
+        <button class="clay form__btn" id="dice_btn">Tirar dados</button>
       </div>
     </section>
   </main>
@@ -70,6 +68,6 @@
       <button class="clay enter__button" id="enter-btn">Enter</button>
     </div>
   </section>
-  <script src="./src/math.js"></script>
+  <script src="./src/dice.js"></script>
 </body>
 </html>
